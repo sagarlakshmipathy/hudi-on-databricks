@@ -66,7 +66,6 @@ inserts.write.format("hudi"). \
 
 
 > Note: Pay close attention to hoodie.file.index.enable being set to false, this enables the use of spark file index implementation for Hudi, that speeds up listing of large tables and is mandatory if you're using Databricks to read Hudi tables.
-:::
 
 ```python
 tripsDF = spark.read.format("hudi").option("hoodie.file.index.enable", "false").load(basePath)
