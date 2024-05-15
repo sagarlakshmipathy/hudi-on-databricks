@@ -1,6 +1,6 @@
 # Hudi on Databricks
 
-If you're a Databricks user looking to optimize data lake operations without the hassle, you're in the right place. In this blog, we'll walk you through the straightforward process of setting up and configuring Hudi within your Databricks environment. All you need is your Databricks account, and you're ready to follow along. We'll cover everything from creating compute instances to installing the necessary libraries, ensuring you're set up for success.
+If you're a Databricks user and are wondering `How do I run Apache Hudi on Databricks?`, you’re not alone. In this blog, we'll walk you through the straightforward process of setting up and configuring Hudi within your Databricks environment. All you need is your Databricks account, and you're ready to follow along. We'll cover everything from creating compute instances to installing the necessary libraries, ensuring you're set up for success.
 Once configured, we'll explore the essential configurations needed to leverage Hudi tables effectively. With these insights, you'll be equipped to tackle data management tasks with ease, all within the familiar Databricks environment.
 
 ## Pre-requisites:
@@ -10,7 +10,8 @@ Once configured, we'll explore the essential configurations needed to leverage H
 1. From your `Databricks` console, click `Compute` and `Create Compute`.
 2. Choose a relevant compute name and choose a runtime version that is compatible with the Hudi version you are planning to use. For example, Databricks’ 13.3 runtime supports Spark 3.4.1 which is currently supported by Hudi.
 
-   <img width="665" alt="Screenshot 2024-05-14 at 4 42 53 PM" src="https://github.com/sagarlakshmipathy/hudi-on-databricks/assets/30472234/c484aefb-a3a6-4047-af70-a2a67a81d292">
+   <img width="729" alt="Screenshot 2024-05-15 at 10 19 49 AM" src="https://github.com/sagarlakshmipathy/hudi-on-databricks/assets/30472234/319e28b5-ef40-488f-bbfc-a3752129257f">
+
 
 4. Once the compute is created, head into the `Libraries` tab inside `hudi-on-databricks` and click on `Install new`.
 5. In the pop-up, choose `Maven` and provide the Hudi-Spark maven coordinates.
@@ -84,7 +85,8 @@ tripsDF.createOrReplaceTempView("trips_table")
 SELECT uuid, fare, ts, rider, driver, city FROM  trips_table WHERE fare > 20.0
 ```
 
-<img width="1436" alt="Screenshot 2024-05-14 at 5 21 14 PM" src="https://github.com/sagarlakshmipathy/hudi-on-databricks/assets/30472234/be68918f-bada-453b-a392-9413e0f53de4">
+<img width="1082" alt="Screenshot 2024-05-15 at 10 18 46 AM" src="https://github.com/sagarlakshmipathy/hudi-on-databricks/assets/30472234/8597444d-e1ca-4f9a-a7ee-40be7bcc3a44">
+
 
 ## Conclusion
 In conclusion, integrating Apache Hudi into your Databricks workflow offers a streamlined approach to data lake management and processing. By following the steps outlined in this blog, you've learned how to seamlessly configure Hudi within your Databricks environment, empowering you to handle data operations with efficiency and confidence.
